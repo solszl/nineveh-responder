@@ -1,0 +1,6 @@
+#summary Full Documentation of the NResponder.
+#labels Featured,Phase-Deploy
+
+= Full ASDoc =
+
+You can see documentation here: http://db-in.com/frameworks/nineveh/doc/
