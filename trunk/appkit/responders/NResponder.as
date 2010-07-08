@@ -627,7 +627,7 @@ package appkit.responders
 		public static function get currentTarget():Object { return CORE.currentTarget; }
 		
 		/**
-		 * Return the Action that as under execution in this moment.
+		 * Return the Action that is under execution in this moment.
 		 * 
 		 * <p/>
 		 * 
@@ -638,6 +638,19 @@ package appkit.responders
 		 * @playerversion Flash 9.0
 		 */
 		public static function get currentAction():String { return CORE.currentAction; }
+		
+		/**
+		 * Return the current NResponder that is under execution in this moment.
+		 * 
+		 * <p/>
+		 * 
+		 * This method just return a NResponder if some is in execution.
+		 * Otherwise, will return <code>null</code>.
+		 * 
+		 * @langversion ActionScript 3.0
+		 * @playerversion Flash 9.0
+		 */
+		public static function get currentNResponder():NResponder { return CORE.currentNResponder; }
 		
 		/**
 		 * [read-only] The NResponder Action associated with this NResponder.
