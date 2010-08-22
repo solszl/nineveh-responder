@@ -1,8 +1,9 @@
 #summary Add Methods (Basic).
+#labels Featured,Phase-Implementation
 
 = Who should read this =
 
-
+To follow you need be familiar with Usage Modes of NResponder. You can find all information about this here UsageModes.
 
 = Introduction =
 
