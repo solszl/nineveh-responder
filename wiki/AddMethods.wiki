@@ -13,9 +13,65 @@ These two way can be accessed by `add()` and `addNative()` methods, respectively
 
 ----
 
+= Where and when to use? = 
+
+Are you a little confuse about use `add()` or `addNative()`?
+
+Is very simple. You just need to remember: "`addNative()` is only to use when my call back function needs to expect an Event class or a class that inherits from Event!".
+
+To any other cases, just use the `add()` method.
+
+Other thing to remember is that `addNative()` method need a target that implement the `addEventLister()` and `removeEventListener()` methods. For example, almost all object classes in Flash Framework inherits from EventListener and has these two methods. 
+
+The [http://www.asual.com/swfaddress/ SWFAddress], for example, is a static class that doesn't inherit from EventListener, but it has implementations of `addEventLister()` and `removeEventListener()` methods. Because of it you can use NResponder to events of [http://www.asual.com/swfaddress/ SWFAddress] class. Like this:
+{{{
+NResponder.addNative(SWFAddress, SWFAddressEvent.INIT, init, 1);
+NResponder.addNative(SWFAddress, SWFAddressEvent.CHANGE, change);
+}}}
+
+Remember the rule of `addNative()`, the call back function, in this case, "`init()`" and "`change()`" will need to expect an "`SWFAddressEvent`" (inherited from Event).
+
+Another third part classes, like [http://away3d.com/ Away3D], [http://blog.papervision3d.org/ PaperVision3D], [http://words.transmote.com/wp/flarmanager/ FLAR Manager], [http://www.greensock.com/v11/ TweenMax] and others, will happen a similar behavior, because they use the native Event API of Flash.
+
+----
+
 = add() =
 
+Use this to all custom events of your application. If you are using the Nineveh Framework, use this method to all events/notifications of the Nineveh Framework.
 
+The usage if very simple:
+{{{
+NResponder.add('someAction', myListener);
+}}}
+
+In a complex application, is advisable to use a class with static constants to store your actions. In this way, you will not risk to miss the spelling of the actions in different classes.
+{{{
+// Class AppActions
+package com.actions
+{
+public class AppActions
+{
+public static const SEARCH:String = 'doSearch';
+
+public static const GO_PAGE:String = 'gotoPage';
+}
+}
+
+// Class ViewController
+
+package com.controls
+{
+public class ViewController
+{
+public function ViewController():void
+{
+NResponder.add(AppActions.GO_PAGE, pageHandler);
+NResponder.add(AppActions.SEARCH, searchHandler);
+}
+}
+}
+
+}}}
 
 ----
 
