@@ -108,3 +108,5 @@ function overOutHandler(event:MouseEvent):void
     trace('Returned by NResponder with native Event API:',event);
 }
 }}}
+
+At this point, using native Event API of Flash, NResponder can seems very similar to EventDispatcher methods, but in the next chapters you will see how graceful and helpful can be NResponder in native Event API too.
