@@ -1,0 +1,31 @@
+#summary Usage modes (Basic). Instanciated mode and abstract mode together.
+#labels Featured,Phase-Implementation
+
+= Introduction =
+
+NResponder engine can be used in two ways: a static mode, more directly, and a instanciated mode, where you have more control on NResponder object. Is advisable use the static mode in general cases and let the instanciated mode just to cases where you needs additional control on NResponder or need to change attributes "on the fly".
+
+
+= Static Mode =
+
+This mode is very simple, just import the NResponder class and can the "adds" methods, like this:
+{{{
+import appkit.responders.NResponder
+...
+NResponder.add('someIdentify', callBackListener);
+
+// or this
+
+NResponder.addNative(someObject, Event.ADDED_TO_STAGE, callBackListener);
+}}}
+
+One important thing to remember is that even the static mode return to you an instance of NResponder. So you can store it instance in a variable. Like this:
+{{{
+var nrInstance:NResponder;
+
+nrInstance = NResponder.add('someIdentify', callBackListener);
+
+// or
+
+nrInstance = NResponder.addNative(someObject, Event.ADDED_TO_STAGE, callBackListener);
+}}}
