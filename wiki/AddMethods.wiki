@@ -51,11 +51,9 @@ package com.actions
 {
     public class AppActions
     {
-        
         public static const SEARCH:String = 'doSearch';
         
         public static const GO_PAGE:String = 'gotoPage';
-    
     }
 }
 
