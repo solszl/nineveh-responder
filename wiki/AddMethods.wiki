@@ -49,32 +49,32 @@ In a complex application, is advisable to use a class with static constants to s
 // Class AppActions
 package com.actions
 {
-	public class AppActions
-	{
-	
-		public static const SEARCH:String = 'doSearch';
-	
-		public static const GO_PAGE:String = 'gotoPage';
-	
-	}
+    public class AppActions
+    {
+        
+        public static const SEARCH:String = 'doSearch';
+        
+        public static const GO_PAGE:String = 'gotoPage';
+    
+    }
 }
 
 // Class ViewController
 
 package com.controls
 {
-	import com.actions.AppActions;
+    import com.actions.AppActions;
 	
-	import appkit.responders.NResponder;
-	
-	public class ViewController
-	{
-		public function ViewController():void
-		{
-			NResponder.add(AppActions.GO_PAGE, pageHandler);
-			NResponder.add(AppActions.SEARCH, searchHandler);
-		}
-	}
+    import appkit.responders.NResponder;
+    
+    public class ViewController
+    {
+        public function ViewController():void
+        {
+            NResponder.add(AppActions.GO_PAGE, pageHandler);
+            NResponder.add(AppActions.SEARCH, searchHandler);
+        }
+    }
 }
 
 }}}
