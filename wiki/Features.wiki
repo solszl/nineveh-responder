@@ -25,3 +25,19 @@ Base on the following table, lets see 3 exclusive features of NResponder: *Numbe
 || *Garbage Collect* ||
 
 ----
+
+= Number of replies =
+
+This is one of the most useful features of NResponder. With number of replies you can specify how many times the NResponder will perform, after the last time, the NResponder will automatically remove itself and will clean all memories allocated to it.
+
+For example, is a very common technique use a ADDED_TO_STAGE event in the constructor of the view classes (display objects) to prevent access to the stage property before the right time. But you need to remove that listener after the object is in the display list. 
+With *number of replies* you can specify 1(one) in the `addNative()` method and don't worry more about anything.
+
+Or, for example, in a game that user need to push a button 5 times, all that you need is specify the number of replies of the MOUSE_DOWN to 5 and NResponder will do everything else.
+
+
+
+
+{{{
+NResponder.addNative(this, Event.ADDED_TO_STAGE, init, 1);
+}}}
