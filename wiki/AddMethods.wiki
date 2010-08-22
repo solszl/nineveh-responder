@@ -97,7 +97,6 @@ myObject.addEventListener(MouseEvent.MOUSE_UP, clickHandler, false, 0, true);
 NResponder.addNative(myObject, MouseEvent.MOUSE_UP, clickHandler);
 }}}
 
-
 The `addNative()` method is more like a shortcut to the constructor. In the NResponder constructor has a parameter called "`isNative`" (the last parameter) that indicate if the new NResponder will work or not with native Event API of Flash.
 So when you call the static method `addNative()` it automatically set the "`isNative`" parameter to `true`.
 
