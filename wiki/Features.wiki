@@ -10,19 +10,19 @@
 Base on the following table, lets see step by step the features of NResponder:
 
 || *Feature* || *NResponder* <br/> (Diney Bomfim) ||
-|| *Used without instance* || <img align="middle" src="http://db-in.com/imgs/yes.gif" title="YES" alt="YES"/> ||
-|| *Used with instance* || <img align="middle" src="http://db-in.com/imgs/yes.gif" title="YES" alt="YES"/> ||
+|| *Used without instance* || <img src="http://db-in.com/imgs/yes.gif" title="YES" alt="YES"/> ||
+|| *Used with instance* || <img src="http://db-in.com/imgs/yes.gif" title="YES" alt="YES"/> ||
 || *Specify number of dispatch arguments* || <img src="http://db-in.com/imgs/yes.gif" title="YES" alt="YES"/> ||
-|| *Dynamic dispatch arguments* || <img align="middle" src="http://db-in.com/imgs/yes.gif" title="YES" alt="YES"/> ||
-|| *Change dispatch arguments in Run-Time* || <img align="middle" src="http://db-in.com/imgs/yes.gif" title="YES" alt="YES"/> ||
+|| *Dynamic dispatch arguments* || <img src="http://db-in.com/imgs/yes.gif" title="YES" alt="YES"/> ||
+|| *Change dispatch arguments in Run-Time* || <img src="http://db-in.com/imgs/yes.gif" title="YES" alt="YES"/> ||
 || *Remove all* || <img src="http://db-in.com/imgs/yes.gif" title="YES" alt="YES"/> ||
-|| *Specify a delay time* || <img align="middle" src="http://db-in.com/imgs/yes.gif" title="YES" alt="YES"/> ||
-|| *Set the number of replies* || <img align="middle" src="http://db-in.com/imgs/yes.gif" title="YES" alt="YES"/> ||
+|| *Specify a delay time* || <img src="http://db-in.com/imgs/yes.gif" title="YES" alt="YES"/> ||
+|| *Set the number of replies* || <img src="http://db-in.com/imgs/yes.gif" title="YES" alt="YES"/> ||
 || *Ordenate* || <img src="http://db-in.com/imgs/yes.gif" title="YES" alt="YES"/> ||
-|| *Can associate with a target* || <img align="middle" src="http://db-in.com/imgs/yes.gif" title="YES" alt="YES"/> ||
-|| *Can pause without remove* || <img align="middle" src="http://db-in.com/imgs/yes.gif" title="YES" alt="YES"/> ||
-|| *Can stop propagation* || <img align="middle" src="http://db-in.com/imgs/yes.gif" title="YES" alt="YES"/> ||
-|| *Change attributes in Run-Time* || <img align="middle" src="http://db-in.com/imgs/yes.gif" title="YES" alt="YES"/> ||
-|| *Garbage Collect* || <img align="middle" src="http://db-in.com/imgs/yes.gif" title="YES" alt="YES"/> ||
+|| *Can associate with a target* || <img src="http://db-in.com/imgs/yes.gif" title="YES" alt="YES"/> ||
+|| *Can pause without remove* || <img src="http://db-in.com/imgs/yes.gif" title="YES" alt="YES"/> ||
+|| *Can stop propagation* || <img src="http://db-in.com/imgs/yes.gif" title="YES" alt="YES"/> ||
+|| *Change attributes in Run-Time* || <img src="http://db-in.com/imgs/yes.gif" title="YES" alt="YES"/> ||
+|| *Garbage Collect* || <img src="http://db-in.com/imgs/yes.gif" title="YES" alt="YES"/> ||
 
 ----
