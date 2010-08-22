@@ -1,6 +1,10 @@
 #summary Usage modes (Basic).
 #labels Featured,Phase-Implementation
 
+= Who should read this =
+
+• If you don't have any idea of what is NResponder, this is the way. Follow reading with an idea in you mind: "NResponder engine came to replace the native Event API of Flash (EventListeners, IEventListener, Events, etc...)".
+
 = Introduction =
 
 NResponder engine can be used in two ways: a static mode, more directly, and a instantiated mode, where you have more control on NResponder object. Is advisable use the static mode in general cases and let the instantiated mode just to cases where you needs additional control on NResponder or need to change attributes "on the fly".
