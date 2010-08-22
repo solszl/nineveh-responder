@@ -3,7 +3,7 @@
 
 = Who should read this =
 
-• If you don't have any idea of what is NResponder, this is the way. Follow reading with an idea in you mind: "NResponder engine came to replace the native Event API of Flash (EventListeners, IEventListener, Events, etc...)".
+  * If you don't have any idea of what is NResponder, this is the way. Follow reading with an idea in you mind: "NResponder engine came to replace the native Event API of Flash (EventListeners, IEventListener, Events, etc...)".
 
 ----
 
