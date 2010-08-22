@@ -46,7 +46,7 @@ NResponder.add('someAction', myListener);
 
 In a complex application, is advisable to use a class with static constants to store your actions. In this way, you will not risk to miss the spelling of the actions in different classes.
 {{{
-// Class AppActions
+// Class AppActions.as
 package com.actions
 {
     public class AppActions
@@ -59,8 +59,7 @@ package com.actions
     }
 }
 
-// Class ViewController
-
+// Class ViewController.as
 package com.controls
 {
     import com.actions.AppActions;
