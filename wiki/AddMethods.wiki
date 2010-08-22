@@ -85,3 +85,26 @@ package com.controls
 ----
 
 = addNative() =
+
+This method is more like a shortcut to the constructor. In the NResponder constructor has a parameter called "`isNative`" (the last parameter) that indicate if the new NResponder will work or not with native Event API of Flash.
+So when you call the static method `addNative()` it automatically set the "`isNative`" parameter to `true`.
+
+To work with native Event API, NResponder need a target that implements the `addEventListener()` and `removeEventListener()`. So, to simplify the things, the `addNative()` method requires this target as the first parameter.
+{{{
+import flash.events.MouseEvent;
+...
+
+var myButton:MovieClip;
+
+NResponder.addNative(myButton, MouseEvent.MOUSE_OVER, overOutHandler);
+NResponder.addNative(myButton, MouseEvent.MOUSE_OUT, overOutHandler);
+NResponder.addNative(myButton, MouseEvent.MOUSE_UP, clickHandler);
+}}}
+
+Remember that to use NResponder with native Event API you need to prepare the listener to expect one parameter of Event.
+{{{
+function overOutHandler(event:MouseEvent):void
+{
+    trace('Returned by NResponder with native Event API:',event);
+}
+}}}
