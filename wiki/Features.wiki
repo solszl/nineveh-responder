@@ -7,7 +7,7 @@
 
 = Introduction =
 
-Base on the following table, lets see step by step the features of NResponder:
+Base on the following table, lets see 3 exclusive features of NResponder:
 
 || *Used without instance* ||
 || *Used with instance* ||
@@ -15,9 +15,9 @@ Base on the following table, lets see step by step the features of NResponder:
 || *Dynamic dispatch arguments* ||
 || *Change dispatch arguments in Run-Time* ||
 || *Remove all* ||
-|| *Specify a delay time* ||
-|| *Set the number of replies* ||
-|| *Ordenate* ||
+|| _*Specify a delay time*_ ||
+|| _*Set the number of replies*_ ||
+|| _*Ordenate*_ ||
 || *Can associate with a target* ||
 || *Can pause without remove* ||
 || *Can stop propagation* ||
@@ -25,5 +25,3 @@ Base on the following table, lets see step by step the features of NResponder:
 || *Garbage Collect* ||
 
 ----
-
-= Used without instance =
