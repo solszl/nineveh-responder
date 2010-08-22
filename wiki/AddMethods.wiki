@@ -51,6 +51,9 @@ package com.actions
 {
     public class AppActions
     {
+        /**
+         * A constant to indicate the action of a Search in an Application.
+         */
         public static const SEARCH:String = 'doSearch';
         
         public static const GO_PAGE:String = 'gotoPage';
