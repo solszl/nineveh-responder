@@ -9,7 +9,6 @@
 
 Base on the following table, lets see step by step the features of NResponder:
 
-|| *Feature* ||
 || *Used without instance* ||
 || *Used with instance* ||
 || *Specify number of dispatch arguments* ||
@@ -26,3 +25,5 @@ Base on the following table, lets see step by step the features of NResponder:
 || *Garbage Collect* ||
 
 ----
+
+= Used without instance =
