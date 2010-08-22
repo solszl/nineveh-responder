@@ -1,4 +1,4 @@
-#summary Usage modes (Basic). Instantiated mode and abstract mode together.
+#summary Usage modes (Basic).
 #labels Featured,Phase-Implementation
 
 = Introduction =
