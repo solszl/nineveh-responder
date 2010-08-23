@@ -35,9 +35,27 @@ With *number of replies* you can specify 1(one) in the `addNative()` method and 
 
 Or, for example, in a game that user need to push a button 5 times, all that you need is specify the number of replies of the MOUSE_DOWN to 5 and NResponder will do everything else.
 
+In all create methods ("add" methods and the constructor) the following parameter of "listener" is the "replies". You just need to inform a number (uint). Remember that 0 (zero) is the default and represent "infinity" replies.
 
-
-
+To the example of ADDED_TO_STAGE, use something like this:
 {{{
 NResponder.addNative(this, Event.ADDED_TO_STAGE, init, 1);
 }}}
+
+To example of MOUSE_DOWN, use something like this:
+{{{
+NResponder.addNative(pushButton, MouseEvent.MOUSE_DOWN, clickHandler, 5);
+}}}
+
+Remember that like some other features, number of replies can be changed in the run-time. So if you need to change this number, use the instantiated mode:
+{{{
+var nrButton:NResponder = NResponder.addNative(pushButton, MouseEvent.MOUSE_DOWN, clickHandler, 5);
+
+...
+
+nrButton.replies = 10;
+}}}
+
+----
+
+= Delay time =
