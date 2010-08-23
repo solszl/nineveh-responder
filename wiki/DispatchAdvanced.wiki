@@ -1,4 +1,5 @@
 #summary Advanced things about dispatching a NResponder (Advanced).
+#labels Featured,Phase-Implementation
 
 = Who should read this =
 
@@ -7,12 +8,69 @@
 
 = Introduction =
 
-Using the dispatch you can 
+Using the dispatch you can change the parameter to the listeners during run-time and do dispatches to an entire target.
 
 ----
 
-= Simple dispatch =
+= Change parameters =
 
+A simple way to change the parameters during run-time is prepare you listener to expect a custom number of arguments, using the "rest".
+{{{
+NResponder.add('someAction', myListener);
+
+...
+var parameters:Array;
+
+if(myConditional)
+{
+    parameters = ['justOneParameter'];
+}
+else
+{
+    parameters = ['anArgument', true, 0, 'anotherString'];
+}
+
+NResponder.dispatch('someAction', parameters);
+
+...
+
+function myListener(...params:Array)
+{
+    // Do something.
+}
+}}}
+
+
+----
+
+= Dispatch to targets =
+
+The dispatch method has 3(three) parameters, the last one is the "toTarget". This means that you can dispatch an action, with more than one NResponder, just to a specific target. For example, you can have in your application 38 buttons at total, all they have MOUSE_OVER, MOUSE_OUT and MOUSE_UP actions in NResponder. How NResponder will know to dispatch one or other? With the "toTarget" parameter.
+
+On each dispatch, NResponder will check the target and if necessary, it will dispatch the action just to its target.
+
+With this feature you can "force/simulate" a dispatch in a listener, for example, you can "force" the dispatch of a MOUSE_OVER action. with a code like this:
+{{{
+NResponder.addNative(myObject1, MouseEvent.MOUSE_OVER, overOutHandler);
+NResponder.addNative(myObject2, MouseEvent.MOUSE_OVER, overOutHandler);
+NResponder.addNative(myObject3, MouseEvent.MOUSE_OVER, overOutHandler);
+
+...
+
+NResponder.dispatch(MouseEvent.MOUSE_OVER, [null], myObject1);
+}}}
+
+For this example, remember that when you use native Event API with NResponder, you listener need to expect a parameter (Event). Because this, this example set "[null]" (array with a null parameter).
+
+Now, another useful feature of dispatch is that you can dispatch all NResponder of a specific target. To do this, pass `null` to the action, set the params to return if you need, and set the target. Like this:
+{{{
+NResponder.addNative(myObject, MouseEvent.MOUSE_UP, clickHandler);
+NResponder.addNative(myObject, 'myCustomAction', customListener);
+
+...
+
+NResponder.dispatch(null, [null], myObject);
+}}}
 
 ----
 
