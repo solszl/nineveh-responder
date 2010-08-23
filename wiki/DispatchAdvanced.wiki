@@ -1,4 +1,4 @@
-#summary Advanced things about dispatching a NResponder (Advanced).
+#summary Advanced topics about dispatching a NResponder (Advanced).
 #labels Featured,Phase-Implementation
 
 = Who should read this =
