@@ -109,6 +109,8 @@ NResponder.add('bannerChange', bannerSelect); // This don't need to be instancia
 nrButton.order = 1; // Now, this NResponder will be dispatched after the first.
 }}}
 
+If two or more NResponders have the same order, they will be dispatched in the order that it was added.
+
 ----
 
 If you have some doubts about this content, leave you comment, check the full documentation here [http://db-in.com/frameworks/nineveh/doc/ ASDoc] or [mailto:diney@db-in.com email me].
