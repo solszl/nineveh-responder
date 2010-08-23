@@ -1,4 +1,5 @@
 #summary Basics about dispatch a NResponder (Basic).
+#labels Featured,Phase-Implementation
 
 = Who should read this =
 
