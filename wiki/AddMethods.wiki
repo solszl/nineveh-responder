@@ -121,3 +121,9 @@ function overOutHandler(event:MouseEvent):void
 }}}
 
 At this point, using NResponder to work with native Event API, can seems very similar to EventDispatcher methods, but in the next chapters you will see how graceful and helpful can be NResponder in native Event API too.
+
+----
+
+If you have some doubts about this content, leave you comment, check the full documentation here [http://db-in.com/frameworks/nineveh/doc/ ASDoc] or [mailto:diney@db-in.com email me].
+
+Will be a pleasure to help.
