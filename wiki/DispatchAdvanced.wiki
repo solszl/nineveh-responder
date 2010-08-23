@@ -19,6 +19,7 @@ A simple way to change the parameters during run-time is prepare you listener to
 NResponder.add('someAction', myListener);
 
 ...
+
 var parameters:Array;
 
 if(myConditional)
