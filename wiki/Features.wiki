@@ -113,4 +113,4 @@ nrButton.order = 1; // Now, this NResponder will be dispatched after the first.
 
 If you have some doubts about this content, leave you comment, check the full documentation here [http://db-in.com/frameworks/nineveh/doc/ ASDoc] or [mailto:diney@db-in.com email me].
 
-Will be a pleasure to help
+Will be a pleasure to help.
