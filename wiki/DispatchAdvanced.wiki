@@ -1,0 +1,21 @@
+#summary Advanced things about dispatching a NResponder (Advanced).
+
+= Who should read this =
+
+  * To follow at this point, you need be familiar with the "add" methods of NResponder. You can find all information about this here AddMethods.
+  * You need be familiar with the dispatch method too. You can find all information about this here DispatchBasics.
+
+= Introduction =
+
+
+
+----
+
+= Simple dispatch =
+
+
+----
+
+If you have some doubts about this content, leave you comment, check the full documentation here [http://db-in.com/frameworks/nineveh/doc/ ASDoc] or [mailto:diney@db-in.com email me].
+
+Will be a pleasure to help.
