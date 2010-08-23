@@ -47,7 +47,7 @@ To example of MOUSE_DOWN, use something like this:
 NResponder.addNative(pushButton, MouseEvent.MOUSE_DOWN, clickHandler, 5);
 }}}
 
-Remember that like some other features, number of replies can be changed in the run-time. So if you need to change this number, use the instantiated mode:
+Remember that like some other features, "replies" can be changed in the run-time. So if you need to change this number, use the instantiated mode:
 {{{
 var nrButton:NResponder = NResponder.addNative(pushButton, MouseEvent.MOUSE_DOWN, clickHandler, 5);
 
@@ -59,3 +59,52 @@ nrButton.replies = 10;
 ----
 
 = Delay time =
+
+The delay time indicate the time, in seconds, that NResponder needs to wait between two consecutives dispatches. For example, you can use the delay time to "transform" an ENTER_FRAME loop in a periodic loop of 2 seconds. Or you can have a button (MOUSE_UP) that can only be pressed each 1.5 second.
+
+To do these two example all that you will need is set just one parameter in NResponder. The following parameter of "replies" is the "delay". Delay expect a number (Number). Remember that 0 (zero) is the default and represent "no delay" between consecutives dispatches.
+
+To the example of ENTER_FRAME, use something like this:
+{{{
+NResponder.addNative(this, Event.ENTER_FRAME, loopHandler, 0, 2);
+}}}
+
+To example of MOUSE_UP, use something like this:
+{{{
+NResponder.addNative(pushButton, MouseEvent.MOUSE_UP, clickHandler, 0, 1.5);
+}}}
+
+Remember that like some other features, "delay" can be changed in the run-time. So if you need to change this number or prefer set the "delay" after some other event (following example), use the instantiated mode:
+{{{
+var nrButton:NResponder = NResponder.addNative(pushButton, MouseEvent.MOUSE_UP, clickHandler);
+
+...
+
+nrButton.delay = 0.5;
+}}}
+
+----
+
+= Ordenate =
+
+Like native Event API of Flash, NResponder can has a complex order if you want. In native Event API you use the "priority" property to change the order. To "priority" higher numbers are dispatched first. This don't make some sense to me, because you need to set 10 to dispatch an event first than other with 3.
+
+NResponder work with order in the inverse way! Think in it like an Array. First indexes are dispatched first. Just it. 0(zero) are the first, after came the 1... after 10, and so on.
+
+To set the order of a NResponder you can set the property "order" or use the parameter in the "add" methods. The following parameter of "delay" is the "order". Order expect a number (int). Remember that 0 (zero) is the default and represent the first order.
+
+To set the order in parameter, use something like this:
+{{{
+NResponder.add('bannerChange', bannerHandler, 0, 0, 1); // This will be dispatched last.
+NResponder.add('bannerChange', bannerSelect, 0, 0, 0); // This listener will be dispatched first.
+}}}
+
+
+Remember that like some other features, "order" can be changed in the run-time. So if you need to change this number or prefer set the "order" after some other event (following example), use the instantiated mode:
+{{{
+var nrButton:NResponder = NResponder.add('bannerChange', bannerHandler);
+NResponder.add('bannerChange', bannerSelect); // This don't need to be instanciated because I will not change anything in this NResponder in the future.
+...
+
+nrButton.order = 1;
+}}}
