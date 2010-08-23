@@ -106,5 +106,9 @@ var nrButton:NResponder = NResponder.add('bannerChange', bannerHandler);
 NResponder.add('bannerChange', bannerSelect); // This don't need to be instanciated because I will not change anything in this NResponder in the future.
 ...
 
-nrButton.order = 1;
+nrButton.order = 1; // Now, this NResponder will be dispatched after the first.
 }}}
+
+---
+
+If you have some doubts about these three features, check the full documentation here Documentation or email me.
