@@ -9,20 +9,20 @@
 
 Base on the following table, lets see 3 exclusive features of NResponder: *Number of replies*, *delay time* and *ordenate*.
 
-|| *Used without instance* ||
-|| *Used with instance* ||
-|| *Specify number of dispatch arguments* ||
-|| *Dynamic dispatch arguments* ||
-|| *Change dispatch arguments in Run-Time* ||
-|| *Remove all* ||
+|| Used without instance ||
+|| Used with instance ||
+|| Specify number of dispatch arguments ||
+|| Dynamic dispatch arguments ||
+|| Change dispatch arguments in Run-Time ||
+|| Remove all ||
 || _*Set the number of replies*_ ||
 || _*Specify a delay time*_ ||
 || _*Ordenate*_ ||
-|| *Can associate with a target* ||
-|| *Can pause without remove* ||
-|| *Can stop propagation* ||
-|| *Change attributes in Run-Time* ||
-|| *Garbage Collect* ||
+|| Can associate with a target ||
+|| Can pause without remove ||
+|| Can stop propagation ||
+|| Change attributes in Run-Time ||
+|| Garbage Collect ||
 
 ----
 
