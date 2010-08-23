@@ -3,7 +3,7 @@
 = Who should read this =
 
   * To follow at this point, you need be familiar with the "add" methods of NResponder. You can find all information about this here AddMethods.
-  * You need be familiar with the dispatch method too. You can find all information about this here DispatchBasics.
+  * You need be familiar with the dispatch method too. You can find all information about this here DispatchBasic.
 
 = Introduction =
 
