@@ -40,7 +40,6 @@ function myListener(...params:Array)
 }
 }}}
 
-
 ----
 
 = Dispatch to targets =
@@ -65,12 +64,37 @@ For this example, remember that when you use native Event API with NResponder, y
 Now, another useful feature of dispatch is that you can dispatch all NResponder of a specific target. To do this, pass `null` to the action, set the params to return if you need, and set the target. Like this:
 {{{
 NResponder.addNative(myObject, MouseEvent.MOUSE_UP, clickHandler);
-NResponder.addNative(myObject, 'myCustomAction', customListener);
+NResponder.add('myCustomAction', customListener, 1, 0, 1, myObject);
 
 ...
 
 NResponder.dispatch(null, [null], myObject);
 }}}
+
+
+----
+
+= Beyond dispatch to targets =
+
+At this point, maybe you already have realized another possibility with targets and dispatch to targets feature. You can use the "target" as a reference or a group to your listeners. You can do things like this:
+{{{
+// In a class A
+NResponder.add('makeSearch', searchHandler, 0, 0, 1, myObject.stage);
+
+// In a class B
+NResponder.add('animateMenuOut', inOutMenu, 0, 0, 0, myObject.stage);
+NResponder.add('closeAllModals', closeModals, 0, 0, 0, myObject.stage);
+
+// In a class C
+NResponder.add('stopBanner', stopBanner, 0, 0, 0, myObject.stage);
+
+...
+
+// In any class
+NResponder.dispatch(null, null, anotherObject.stage);
+}}}
+
+As you noted, in this example the dispatch has the second parameter of "null" instead "[null]", it is because all the listeners of these NResponders don't expect any parameter.
 
 ----
 
