@@ -91,7 +91,7 @@ Like native Event API of Flash, NResponder can has a complex order if you want. 
 
 NResponder work with order in the inverse way! Think in it like an Array. First indexes are dispatched first. Just it. 0(zero) are the first, after came the 1... after 10, and so on.
 
-To set the order of a NResponder you can set the property "order" or use the parameter in the "add" methods. The following parameter of "delay" is the "order". Order expect a number (int). Remember that 0 (zero) is the default and represent the first order.
+To set the order of a NResponder you can set the property "order" or use the parameter in the "add" methods. The following parameter of "delay" is the "order". Order expect a number (uint). Remember that 0 (zero) is the default and represent the first order.
 
 To set the order in parameter, use something like this:
 {{{
