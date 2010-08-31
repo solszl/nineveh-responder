@@ -13,6 +13,8 @@ Using NResponder to a native events you gain a lot of performance, because not t
 
 These two way can be accessed by `add()` and `addNative()` methods, respectively. Or using the parameter "isNative" in the constructor.
 
+In both ways, you can completely replace the use of addEventListener and removeEventListener in your application.
+
 ----
 
 = Where and when to use? = 
