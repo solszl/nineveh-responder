@@ -128,4 +128,4 @@ At this point, using NResponder to work with native Event API, can seems very si
 
 If you have some doubts about this content, leave you comment, check the full documentation here [http://db-in.com/frameworks/nineveh/doc/ ASDoc] or [mailto:diney@db-in.com email me].
 
-Will be a pleasure to help
+Will be a pleasure to help.
