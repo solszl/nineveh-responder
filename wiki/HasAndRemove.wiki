@@ -74,18 +74,20 @@ NResponder.remove('anotherAction');
 NResponder.remove('anotherAction', anotherListener);
 NResponder.remove(null, anotherListener);
 
-NResponder.dispatch('anotherAction'); // Nothing will happens.
+// Nothing will happens.
+NResponder.dispatch('anotherAction');
 
-NResponder.dispatch('myAction'); // In reason the order, the listener "myListener_2" will be dispatched first.
+// In reason the order, the listener "myListener_2" will be dispatched first.
+NResponder.dispatch('myAction');
 
-NResponder.dispatch('myAction'); // This second attempt to dispatch "myAction" will result in nothing, because during the first dispatch this Action was removed.
+// This second attempt to dispatch "myAction" will result in nothing, because during the first dispatch this Action was removed.
+NResponder.dispatch('myAction');
 
 ...
 
 function myListener_1():void
 {
     // This function will appear because the remove will occurs just after finish the execution of the current dispatch.
-    
     trace('This is the "myListener_1" and was dispatched last because has the last order.');
 }
 
