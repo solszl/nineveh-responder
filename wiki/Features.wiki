@@ -7,7 +7,7 @@
 
 = Introduction =
 
-Base on the following table, lets see 3 exclusive features of NResponder: *Number of replies*, *delay time* and *ordenate*.
+Base on the following table, let's see 3 exclusive features of NResponder: *Number of replies*, *delay time* and *ordenate*.
 
 || Used without instance ||
 || Used with instance ||
