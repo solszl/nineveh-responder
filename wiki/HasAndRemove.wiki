@@ -15,6 +15,12 @@ These methods are very similar with `hasEventListener()` and `removeEventListene
 
 = Has() =
 
+This method expect 3 (three) parameter and by default all these three is null. Because you can make any combination to active a specific behavior. The parameters are:
+  * Action - A string that represent the action you want to search.
+  * Listener - The function itself that you want to search.
+  * Target - The target itself that you want to search.
+
+Let's start with a simple example:
 
 ----
 
