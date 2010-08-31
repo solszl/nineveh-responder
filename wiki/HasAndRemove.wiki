@@ -20,16 +20,42 @@ This method expect 3 (three) parameter and by default all these three is null. B
   * Listener - The function itself that you want to search.
   * Target - The target itself that you want to search.
 
-Let's start with a simple example:
+Let's start with a simple example and increase the complexity gradually:
 {{{
 NResponder.add('myAction', myListener, 1, 0, 0, myObject);
-NResponder.add('myAction', anotherListener);
 NResponder.add('anotherAction', anotherListener);
 
 ...
 
-
+trace(NResponder.has('myAction'));                                 // true
+trace(NResponder.has('anotherAction'));                            // true
+trace(NResponder.has('myAction', myListener));                     // true
+trace(NResponder.has(null, myListener));                           // true
+trace(NResponder.has(null, anotherListener));                      // true
+trace(NResponder.has(null, null, myObject));                       // true
+trace(NResponder.has('myAction', anotherListener));                // false
+trace(NResponder.has('anotherAction', myListener));                // false
+trace(NResponder.has('anotherAction', anotherListener, myObject)); // false
+trace(NResponder.has('myAction', null, myObject));                 // true
+trace(NResponder.has('anotherAction', null, myObject));            // false
 }}}
+
+As you can see you can make any combination. You don't need every time have all parameters, you need at least one to check if has a NResponder with it. Analyzing the lines above, we can see:
+  * NResponder.has('myAction') will check if exist at least one NResponder with the Action "myAction".
+  * NResponder.has('myAction', myListener) will be more specific, and will check if has a NResponder with "myAction" as Action and "myListener" as Listener.
+  * NResponder.has('anotherAction', anotherListener, myObject) will be a very specific and will search for a NResponder with exactly "myAction", "anotherListener" and "myObject", in this example, don't exist so return `false`.
+  * NResponder.has(null, anotherListener) will ignore the Action and will search at least one NResponder with "anotherListener" as Listener.
+  * NResponder.has(null, null, myObject) will ignore the Action and the Listener and will search at least one NResponder with "myObject" as Target.
+  * NResponder.has('anotherAction', null, myObject) will search for a NResponder with "myObject" as Target with a specific Action, the "anotherAction" independent of the Listener that it has.
+
+The most important here is remember that `null` parameter represent that you want to ignore that parameter and focus on others.
+
+For security reasons, the `has()` with null in all three parameter will always return `false`, because you can't check or manipulate all the NResponder at same time.
+
+
+----
+
+= Remove() =
 
 ----
 
