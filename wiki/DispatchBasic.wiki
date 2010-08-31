@@ -11,7 +11,7 @@ After you created a NResponder with the "add" methods or with the contructor, yo
 
 In a more advanced chapter you can learn some exclusive features of the dispatch method. You can, for example dispatch all the NResponder of a specific action or dispatch all NResponder of a specific target or either change the parameters to the listeners on the run-time.
 
-For now, lets see a simple dispatch.
+For now, let's see a simple dispatch.
 
 
 ----
