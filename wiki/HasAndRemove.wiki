@@ -21,6 +21,15 @@ This method expect 3 (three) parameter and by default all these three is null. B
   * Target - The target itself that you want to search.
 
 Let's start with a simple example:
+{{{
+NResponder.add('myAction', myListener, 1, 0, 0, myObject);
+NResponder.add('myAction', anotherListener);
+NResponder.add('anotherAction', anotherListener);
+
+...
+
+
+}}}
 
 ----
 
