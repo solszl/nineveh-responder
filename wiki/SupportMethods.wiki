@@ -71,7 +71,6 @@ function clickHandler(event:MouseEvent):void
     // Any click on "myButton" will dispatch the Action "listenerOne" too.
     NResponder.dispatch('listenerOne');
 }
-
 }}}
 
 
@@ -79,15 +78,79 @@ function clickHandler(event:MouseEvent):void
 
 = stopPropagate() =
 
+This method is very simple and similar to native `stopImediatePropagation()`. This method immediately stop the dispatching process of a specific Action.
+
+For example, suppose that you have a photos gallery and you need to make a ZOOM on entire gallery if the user MOUSE_WHEEL on background (stage), but if the user make a MOUSE_WHEEL over a specific photo, just it will ZOOM:
+{{{
+NResponder.addNative(eachPhotoInstance, MouseEvent.MOUSE_WHEEL, zoomPhoto);
+
+// Set the NResponder to stage after.
+// Or if you need to the NResponder to stage first, set it order to 1, for example.
+NResponder.addNative(this.stage, MouseEvent.MOUSE_WHEEL, zoomGallery);
+
+...
+
+function zoomPhoto(event:MouseEvent):void
+{
+    // Do something.
+    ...
+    NResponder.stopPropagate();
+}
+
+function zoomGallery(event:MouseEvent):void
+{
+    // This method just will be called if the user make a MOUSE_WHEEL on stage AND outside a photo.
+    // Just do something.
+}
+}}}
+
 ----
 
 = paused =
+
+You can change this property any time you want. When `paused` is TRUE, the NResponder will not perform the listener and any attribute like `replies` or `delay` will not be counted down. When paused, the NResponder completely ignores any dispatch.
+
+For example:
+{{{
+var myResponder:NResponder = NResponder.add('anAction', aListener, 0, 0, 0, aTarget);
+myResponder.pause = true;
+
+// Both following dispatches will result in nothing, because the NResponder is paused.
+NResponder.dispatch('anAction');
+NResponder.dispatch(null, null, aTarget);
+
+...
+
+function aListener():void
+{
+    // This listener will not be dispatched until "myResponder" is unpaused.
+}
+}}}
 
 ----
 
 = perform() =
 
+With this method you can perform the listener of a NResponder without use the common behavior, this means that properties like `replies` or `delay` will not be counted down.
 
+If you want, you can respect the delay time, but is not necessary.
+
+For example:
+{{{
+var myResponder = NResponder.add('anAction', aListener, 2, 4);
+
+// After the following dispatch, NResponder will down its replies to 1 and need to wai 4 seconds until next dispatch.
+NResponder.dispatch('anAction', ['stringParameter']);
+
+// The following three dispatch will be performed without count down the number of replies and without wait the previously delay of 4 seconds.
+myResponder.perform(['stringParameter']);
+myResponder.perform(['stringParameter']);
+myResponder.perform(['stringParameter']);
+
+// Now the following dispatch will respect the delay time, using TRUE in the second parameter.
+// This method will return FALSE, because it cannot conclude the perform.
+trace(myResponder.perform(['stringParameter'], true)); // Output "false"
+}}}
 
 ----
 
