@@ -143,8 +143,10 @@ var myResponder = NResponder.add('anAction', aListener, 2, 4);
 NResponder.dispatch('anAction', ['stringParameter']);
 
 // The following three dispatch will be performed without count down the number of replies and without wait the previously delay of 4 seconds.
-trace(myResponder.perform(['stringParameter'])); // Output "true"
-trace(myResponder.perform(['stringParameter'])); // Output "true"
+myResponder.perform(['stringParameter']);
+myResponder.perform(['stringParameter']);
+
+// The perform() method return a Boolean indicating if it has successful or not.
 trace(myResponder.perform(['stringParameter'])); // Output "true"
 
 // Now the following dispatch will respect the delay time, using TRUE in the second parameter.
