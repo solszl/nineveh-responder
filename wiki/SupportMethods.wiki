@@ -1,0 +1,96 @@
+#summary With these you can treat NResponder during a dispatch(Advanced).
+#labels Featured,Phase-Implementation
+
+= Who should read this =
+
+  * To follow at this point, you need be familiar with the "add" methods of NResponder. You can find all information about this here AddMethods.
+  * You need be familiar with the dispatch method too. You can find all information about this here DispatchBasic.
+  * You should know the `has()` and `remove()` methods. You can find all information about this here HasAndRemove.
+
+= Introduction =
+
+NResponder has 4 (four) static supports:
+  # `currentAction`
+  # `currentTarget`
+  # `currentNResponder`
+  # `stopPropagate()`
+
+And 2 (two) instanciated supports:
+  # `paused`
+  # `perform()`
+
+----
+
+= currentAction | currentTarget | currentNResponder =
+
+Also know as "currents", these three methods have a very similar behavior. They are read-only properties and just works during a dispatch. This means you try to call one of these outside a listener of NResponder, you will have `null` as response.
+
+The function of "currents" is give to you a shortcut to access some importants characteristics of a dispatch. If you are using the "static mode" (see UsageModes for information about modes) or don't have access to the instance of NResponder, you can use these properties to retrieve what you need.
+
+The name of property very direct and say what it return:
+  * `currentAction`: Return the Action of the current dispatching.
+  * `currentTarget`: Return the Target associated with the current dispatching.
+  * `currentNResponder`: Return the NResponder instance that produced the current dispatching.
+
+The following example will show how "currents" can respond different in different places of your application.
+{{{
+NResponder.add('actionOne', listenerOne);
+NResponder.add('actionTwo', listenerTwo);
+NResponder.addNative(myButton, MouseEvent.CLICK, clickHandler);
+
+trace(NResponder.currentAction); // Will output "null"
+trace(NResponder.currentTarget); // Will output "null"
+
+...
+
+// Start dispatching "listenerOne".
+NResponder.dispatch('listenerOne');
+
+...
+
+function listenerOne():void
+{
+    trace(NResponder.currentAction); // Will output "actionOne"
+    trace(NResponder.currentTarget); // Will output "null"
+    
+    // Before finish this dispatch, let's dispatch another NResponder, doing a multiple dispatch.
+    NResponder.dispatch('actionTwo');
+}
+
+function listenerTwo():void
+{
+    trace(NResponder.currentAction); // Will output "actionTwo"
+    trace(NResponder.currentTarget); // Will output "null"
+}
+
+function clickHandler(event:MouseEvent):void
+{
+    trace(NResponder.currentAction); // Will output "click"
+    trace(NResponder.currentTarget); // Will output "[myButton object]"
+    
+    // Any click on "myButton" will dispatch the Action "listenerOne" too.
+    NResponder.dispatch('listenerOne');
+}
+
+}}}
+
+
+----
+
+= stopPropagate() =
+
+----
+
+= paused =
+
+----
+
+= perform() =
+
+
+
+----
+
+If you have some doubts about this content, leave you comment, check the full documentation here [http://db-in.com/frameworks/nineveh/doc/ ASDoc] or [mailto:diney@db-in.com email me].
+
+Will be a pleasure to help.
