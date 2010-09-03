@@ -155,7 +155,7 @@ trace(myResponder.perform(['stringParameter'], true)); // Output "false"
 
 function aListener(newString:String):void
 {
-    trace('Perform the aListener, with', newString, 'parameter');
+    trace('Performing the aListener, with', newString, 'parameter');
 }
 }}}
 
