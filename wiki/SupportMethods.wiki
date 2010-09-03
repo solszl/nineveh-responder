@@ -150,6 +150,13 @@ myResponder.perform(['stringParameter']);
 // Now the following dispatch will respect the delay time, using TRUE in the second parameter.
 // This method will return FALSE, because it cannot conclude the perform.
 trace(myResponder.perform(['stringParameter'], true)); // Output "false"
+
+...
+
+function aListener(newString:String):void
+{
+    trace('Perform the aListener, with', newString, 'parameter');
+}
 }}}
 
 ----
