@@ -7,7 +7,7 @@
 
 = Introduction =
 
-Base on the following table, let's see 3 exclusive features of NResponder: *Number of replies*, *delay time* and *ordenate*.
+Base on the following table, let's see 3 exclusive features of NResponder: *Number of replies*, *delay time* and * ordinate*.
 
 || Used without instance ||
 || Used with instance ||
@@ -60,7 +60,7 @@ nrButton.replies = 10;
 
 = Delay time =
 
-The delay time indicate the time, in seconds, that NResponder needs to wait between two consecutives dispatches. For example, you can use the delay time to "transform" an ENTER_FRAME loop in a periodic loop of 2 seconds. Or you can have a button (MOUSE_UP) that can only be pressed each 1.5 second.
+The delay time indicate the time, in seconds, that NResponder needs to wait between two consecutive dispatches. For example, you can use the delay time to "transform" an ENTER_FRAME loop in a periodic loop of 2 seconds. Or you can have a button (MOUSE_UP) that can only be pressed each 1.5 second.
 
 To do these two example all that you will need is set just one parameter in NResponder. The following parameter of "replies" is the "delay". Delay expect a number (Number). Remember that 0 (zero) is the default and represent "no delay" between consecutives dispatches.
 
