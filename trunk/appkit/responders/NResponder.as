@@ -16,7 +16,7 @@ package appkit.responders
 	 * 
 	 * <p/>
 	 * 
-	 * <code>NResponder</code> was originaly created as an integrant part of <b>AppKit</b> in the
+	 * <code>NResponder</code> was originally created as an integrant part of <b>AppKit</b> in the
 	 * <b>Nineveh Framework</b>. <code>NResponder</code> is a Self Concrete class, this means that it can
 	 * work outside <b>Nineveh Framework</b> without penalties or losses.
 	 * 
@@ -39,18 +39,18 @@ package appkit.responders
 	 * 
 	 * <b>FEATURES</b>
 	 * <ul>
-	 * <li>Work in static or instaciated mode;</li>
+	 * <li>Work in static or instantiated mode;</li>
 	 * <li>Can specify the number of arguments to dispatch;</li>
-	 * <li>Can change these arguments "on the fly" (in RunTime);</li>
+	 * <li>Can change these arguments "on the fly" (in Run-Time);</li>
 	 * <li>Can remove all NResponders;</li>
 	 * <li>Can specify the number of replies;</li>
-	 * <li>Can ordenate the replies;</li>
+	 * <li>Can ordinate the replies;</li>
 	 * <li>Can associate each listener with one target;</li>
 	 * <li>Can have a delay to the next dispatch;</li>
 	 * <li>Can pause or resume the replies;</li>
-	 * <li>Can change all this attributes "on the fly" (in RunTime);</li>
+	 * <li>Can change all this attributes "on the fly" (in Run-Time);</li>
 	 * <li>Can join to native Event API of Adobe® Flash® and continue to use all this features;</li>
-	 * <li>Can instanciate and control each NResponder without change the others.</li>
+	 * <li>Can instantiate and control each NResponder without change the others.</li>
 	 * </ul>
 	 * 
 	 * <p/>
@@ -97,7 +97,7 @@ package appkit.responders
 	 * <tr><td><b>Used with instance</b></td><td><img src="http://db-in.com/imgs/yes.gif" title="Yes" alt="Yes"></img></td><td><img src="http://db-in.com/imgs/yes.gif" title="Yes" alt="Yes"></img></td><td><img src="http://db-in.com/imgs/yes.gif" title="Yes" alt="Yes"></img></td></tr>
 	 * <tr><td><b>Specify number of dispatch arguments</b></td><td><img src="http://db-in.com/imgs/no.gif" title="No" alt="No"></img></td><td><img src="http://db-in.com/imgs/yes.gif" title="Yes" alt="Yes"></img></td><td><img src="http://db-in.com/imgs/yes.gif" title="Yes" alt="Yes"></img></td></tr>
 	 * <tr><td><b>Dynamic dispatch arguments</b></td><td><img src="http://db-in.com/imgs/no.gif" title="No" alt="No"></img></td><td><img src="http://db-in.com/imgs/yes.gif" title="Yes" alt="Yes"></img></td><td><img src="http://db-in.com/imgs/yes.gif" title="Yes" alt="Yes"></img></td></tr>
-	 * <tr><td><b>Change dispatch arguments in RunTime</b></td><td><img src="http://db-in.com/imgs/no.gif" title="No" alt="No"></img></td><td><img src="http://db-in.com/imgs/no.gif" title="No" alt="No"></img></td><td><img src="http://db-in.com/imgs/yes.gif" title="Yes" alt="Yes"></img></td></tr>
+	 * <tr><td><b>Change dispatch arguments in Run-Time</b></td><td><img src="http://db-in.com/imgs/no.gif" title="No" alt="No"></img></td><td><img src="http://db-in.com/imgs/no.gif" title="No" alt="No"></img></td><td><img src="http://db-in.com/imgs/yes.gif" title="Yes" alt="Yes"></img></td></tr>
 	 * <tr><td><b>Remove all</b></td><td><img src="http://db-in.com/imgs/no.gif" title="No" alt="No"></img></td><td>limited to instance</td><td><img src="http://db-in.com/imgs/yes.gif" title="Yes" alt="Yes"></img></td></tr>
 	 * <tr><td><b>Specify a delay time</b></td><td><img src="http://db-in.com/imgs/no.gif" title="No" alt="No"></img></td><td><img src="http://db-in.com/imgs/no.gif" title="No" alt="No"></img></td><td><img src="http://db-in.com/imgs/yes.gif" title="Yes" alt="Yes"></img></td></tr>
 	 * <tr><td><b>Set the number of replies</b></td><td><img src="http://db-in.com/imgs/no.gif" title="No" alt="No"></img></td><td>Just 1</td><td><img src="http://db-in.com/imgs/yes.gif" title="Yes" alt="Yes"></img></td></tr>
@@ -105,7 +105,7 @@ package appkit.responders
 	 * <tr><td><b>Can associate with a target</b></td><td><img src="http://db-in.com/imgs/yes.gif" title="Yes" alt="Yes"></img></td><td>only NativeSignal</td><td><img src="http://db-in.com/imgs/yes.gif" title="Yes" alt="Yes"></img></td></tr>
 	 * <tr><td><b>Can pause without remove</b></td><td><img src="http://db-in.com/imgs/no.gif" title="No" alt="No"></img></td><td><img src="http://db-in.com/imgs/no.gif" title="No" alt="No"></img></td><td><img src="http://db-in.com/imgs/yes.gif" title="Yes" alt="Yes"></img></td></tr>
 	 * <tr><td><b>Can stop propagation</b></td><td><img src="http://db-in.com/imgs/yes.gif" title="Yes" alt="Yes"></img></td><td><img src="http://db-in.com/imgs/no.gif" title="No" alt="No"></img></td><td><img src="http://db-in.com/imgs/yes.gif" title="Yes" alt="Yes"></img></td></tr>
-	 * <tr><td><b>Change attributes in RunTime</b></td><td><img src="http://db-in.com/imgs/no.gif" title="No" alt="No"></img></td><td><img src="http://db-in.com/imgs/no.gif" title="No" alt="No"></img></td><td><img src="http://db-in.com/imgs/yes.gif" title="Yes" alt="Yes"></img></td></tr>
+	 * <tr><td><b>Change attributes in Run-Time</b></td><td><img src="http://db-in.com/imgs/no.gif" title="No" alt="No"></img></td><td><img src="http://db-in.com/imgs/no.gif" title="No" alt="No"></img></td><td><img src="http://db-in.com/imgs/yes.gif" title="Yes" alt="Yes"></img></td></tr>
 	 * <tr><td><b>Garbage Collect</b></td><td>only weak references</td><td><img src="http://db-in.com/imgs/no.gif" title="No" alt="No"></img></td><td><img src="http://db-in.com/imgs/yes.gif" title="Yes" alt="Yes"></img></td></tr>
 	 * </table>
 	 * 
@@ -162,7 +162,7 @@ package appkit.responders
 	 * 
 	 * The usage is very simple and is similar with native Event API to don't make confusion in the time to write.
 	 * 
-	 * @example To use this example just compile the folling code as a <code>NResponderExample.as</code>.
+	 * @example To use this example just compile the following code as a <code>NResponderExample.as</code>.
 	 * 
 	 * <listing version="3.0" >
 	 * package
@@ -178,10 +178,11 @@ package appkit.responders
 	 * 		{
 	 * 			// Very simple set, without worry with weak references, parameters, or memory control.
 	 * 			// As you can see, actionListener expect a parameter, but I don't need to set it here,
-	 * 			// because the NResponder can change the parameter in RunTime if I want.
+	 * 			// because the NResponder can change the parameter in Run-Time if I want.
 	 * 			NResponder.add('theAction', actionListener);
 	 * 
-	 * 			// You can dispatch a NResponder of anywhere in your application, may even be of another SWF file.
+	 * 			// You can dispatch a NResponder of anywhere in your application,
+	 * 			// may even be of another SWF file.
 	 * 			// The following dispatch will result on a trace inside actionListener();
 	 * 			NResponder.dispatch('theAction');			
 	 * 
@@ -356,7 +357,7 @@ package appkit.responders
 		 * @param	replies		How many times the listener will perform with NResponder Action.
 		 * How any listener can't be added to respond 0 times. So the 0 represent the infinity replies.
 		 * 
-		 * @param	delay		The delay time, in seconds, between two consecutives dispatches.
+		 * @param	delay		The delay time, in seconds, between two consecutive dispatches.
 		 * During the delay time the NResponder Action will not activate the listener.
 		 * <br/>
 		 * For example, if the delay time set for the mouse click on a button is of 2 seconds and
@@ -364,7 +365,7 @@ package appkit.responders
 		 * 
 		 * @param	order		The order in which the listener will be dispatched. 
 		 * The order is designated by a unsigned 32-bit integer. It work exactly in the
-		 * oposite way of <code>priority</code>. Firsts orders are dispached first.
+		 * opposite way of <code>priority</code>. Firsts orders are dispatched first.
 		 * <br/>
 		 * For example an order of <code>n</code> is dispatched first than an order of <code>n+1</code>.
 		 * If two or more listeners share the same priority, they are dispatched in the order in which
@@ -373,7 +374,7 @@ package appkit.responders
 		 * @param	useTarget	An object to associate with this listener and access it during execution.
 		 * This object can be of any kind inherited from <code>Object Class</code>.
 		 * <br/>
-		 * You can access it during the execution of the listener by calling the propertie
+		 * You can access it during the execution of the listener by calling the property
 		 * <code>currentTarget</code> of the <code>NResponder Class</code>.
 		 * 
 		 * @param	isNative	This parameter indicate if the NResponder will work with native Event API
@@ -389,16 +390,25 @@ package appkit.responders
         public function NResponder(action:String, listener:Function, replies:uint = 0, delay:Number = 0,
 								  order:uint = 0, useTarget:Object = null, isNative:Boolean = false):void 
         {
-			this.$action = action;
-			this.$listener = listener;
+			// Treat the error of null native targets.
+			if (isNative && !useTarget)
+			{
+				trace('Target can`t be null to native NResponders.');
+				return;
+			}
+			
+			// Setting the parameters.
+			$action = action;
+			$listener = listener;
 			this.replies = replies;
 			this.delay = delay;
-			this.$order = order;
-			this.$target = useTarget;
-			this.$isNative = isNative;
-			this.$lastDelay = int.MIN_VALUE;
-			this.$hash = NIdentifier.from($action) << 0x08 | NIdentifier.from($target);
+			$order = order;
+			$target = useTarget;
+			$isNative = isNative;
+			$lastDelay = int.MIN_VALUE;
+			$hash = NIdentifier.from($action) << 0x08 | NIdentifier.from($target);
 			
+			// Register the NResponder instance.
 			CORE.register(this);
         }
 		
@@ -426,7 +436,7 @@ package appkit.responders
 		 * @param	replies		How many times the listener will perform with NResponder Action.
 		 * How any listener can't be added to respond 0 times. So the 0 represent the infinity replies.
 		 * 
-		 * @param	delay		The delay time, in seconds, between two consecutives dispatches.
+		 * @param	delay		The delay time, in seconds, between two consecutive dispatches.
 		 * During the delay time the NResponder Action will not activate the listener.
 		 * <br/>
 		 * For example, if the delay time set for the mouse click on a button is of 2 seconds and
@@ -434,7 +444,7 @@ package appkit.responders
 		 * 
 		 * @param	order		The order in which the listener will be dispatched. 
 		 * The order is designated by a unsigned 32-bit integer. It work exactly in the
-		 * oposite way of <code>priority</code>. Firsts orders are dispached first.
+		 * opposite way of <code>priority</code>. Firsts orders are dispatched first.
 		 * <br/>
 		 * For example an order of <code>n</code> is dispatched first than an order of <code>n+1</code>.
 		 * If two or more listeners share the same priority, they are dispatched in the order in which
@@ -443,7 +453,7 @@ package appkit.responders
 		 * @param	useTarget	An object to associate with this listener and access it during execution.
 		 * This object can be of any kind inherited from <code>Object Class</code>.
 		 * <br/>
-		 * You can access it during the execution of the listener by calling the propertie
+		 * You can access it during the execution of the listener by calling the property
 		 * <code>currentTarget</code> of the <code>NResponder Class</code>.
 		 * 
 		 * @return				A new instance of NResponder. You can store this instance to future consults
@@ -479,7 +489,7 @@ package appkit.responders
 		 * @param	replies		How many times the listener will perform with NResponder Action.
 		 * How any listener can't be added to respond 0 times. So the 0 represent the infinity replies.
 		 * 
-		 * @param	delay		The delay time, in seconds, between two consecutives dispatches.
+		 * @param	delay		The delay time, in seconds, between two consecutive dispatches.
 		 * During the delay time the NResponder Action will not activate the listener.
 		 * <br/>
 		 * For example, if the delay time set for the mouse click on a button is of 2 seconds and
@@ -487,7 +497,7 @@ package appkit.responders
 		 * 
 		 * @param	order		The order in which the listener will be dispatched. 
 		 * The order is designated by a unsigned 32-bit integer. It work exactly in the
-		 * oposite way of <code>priority</code>. Firsts orders are dispached first.
+		 * opposite way of <code>priority</code>. Firsts orders are dispatched first.
 		 * <br/>
 		 * For example an order of <code>n</code> is dispatched first than an order of <code>n+1</code>.
 		 * If two or more listeners share the same priority, they are dispatched in the order in which
@@ -516,7 +526,7 @@ package appkit.responders
 		 * or all NResponder with a specific Listener and Target.
 		 * Altogether, you have 7 possibilities to combine these 3 parameter and perform an exclusion
 		 * of NResponders.
-		 * Some possiblities are:
+		 * Some possibilities are:
 		 * 
 		 * <ul>
 		 * 
@@ -544,11 +554,11 @@ package appkit.responders
 		 * 
 		 * @param	listener	The listener to be removed.
 		 * 
-		 * @param	toTarget	A target specified when add a listener. Just perform the remove() in this target.
+		 * @param	toTarget	A target specified in add(). Just perform the remove() in this target.
 		 * 
-		 * @return				A Boolean that indicates: true = sucess, false = don't exist in NResponder Chain.
+		 * @return				A Boolean that indicates: true = success, false = don't exist.
 		 * 
-		 * @example To use this example just compile the folling code as a <code>NResponderRemoveExample.as</code>.
+		 * @example To use this example just compile the following code as a <code>NResponderRemoveExample.as</code>.
 		 * This example is very dense and works with a lot of features of NResponder, combining remove modes.
 		 * When you test it, click a lot of times on the stage and analyse the traces line by line.
 		 * 
@@ -566,7 +576,7 @@ package appkit.responders
 		 * 		
 		 * 		public function NResponderRemoveExample():void
 		 * 		{
-		 * 			// First let's add a serie of different NResponders.
+		 * 			// First let's add a series of different NResponders.
 		 * 			NResponder.add('theAction', actionListener);
 		 * 			NResponder.add('anotherAction', actionListener);
 		 * 			NResponder.add('anActionWithTarget', anotherListener, 0, 0, 0, this);
@@ -581,7 +591,7 @@ package appkit.responders
 		 * 		
 		 * 		private function anotherListener():void
 		 * 		{
-		 * 			trace('OK, anotherListener is catched with seted target', NResponder.currentTarget);
+		 * 			trace('OK, anotherListener is catched with set target', NResponder.currentTarget);
 		 * 			
 		 * 			// Here let's dispatch another NResponder with the action "anotherAction".
 		 * 			NResponder.dispatch('anotherAction', ['aString']);
@@ -601,9 +611,10 @@ package appkit.responders
 		 * 		
 		 * 		private function downHandler(e:MouseEvent):void
 		 * 		{
-		 * 			trace('OK, MouseDown --- Originaly was set as first to MOUSE_DOWN');
+		 * 			trace('OK, MouseDown --- Originally was set as first to MOUSE_DOWN');
 		 * 			
-		 * 			// This NResponder was added first, so it execute first than my instance of "clickResponder"
+		 * 			// This NResponder was added first.
+		 * 			// so it execute first than my instance of "clickResponder".
 		 * 			// But now, I will change the order of this NResponder and will set it be a greater than 
 		 * 			// my instance of "clickResponder".
 		 * 			// Obviously this change will take effect just in the next dispatch.
@@ -617,9 +628,9 @@ package appkit.responders
 		 * 				
 		 * 				// Now let's increase the "clickResponder" order. This will affect the
 		 * 				// currentNResponder's order above. So when this currentNResponder's order comes to 5,
-		 * 				// let's remove the NResponders with "MouseEvent.MOUSE_DOWN" Action to "this.stage" target.
-		 * 				// This means that independent of the the Listener, all NResponder with "MouseEvent.MOUSE_DOWN"
-		 * 				// and with target "this.stage" will be removed.
+		 * 				// let's remove the NResponders with "MouseEvent.MOUSE_DOWN" Action to "this.stage".
+		 * 				// This means that independent of the the Listener, all NResponder with
+		 * 				// "MouseEvent.MOUSE_DOWN" and with target "this.stage" will be removed.
 		 * 				clickResponder.order += 1;
 		 * 				if(NResponder.currentNResponder.order === 5)
 		 * 				{
@@ -630,7 +641,7 @@ package appkit.responders
 		 * 		
 		 * 		private function clickListener(e:MouseEvent):void
 		 * 		{
-		 * 			trace('OK, ClickListener  --- Originaly was set as last to MOUSE_DOWN');
+		 * 			trace('OK, ClickListener  --- Originally was set as last to MOUSE_DOWN');
 		 * 		}
 		 * 	}
 		 * }
@@ -649,13 +660,13 @@ package appkit.responders
 		 * 
 		 * <p/>
 		 * 
-		 * Just like <code>remove()</code>, the <code>has()</code> method can be used combining the three parameters.
+		 * Just like <code>remove()</code>, the <code>has()</code> method can be used combining the parameters.
 		 * To ignore a parameter, just set it to <code>null</code>. With this behavior you can
 		 * find all NResponders to a specific Action, or all NResponders to a specific Target,
 		 * or all NResponder with a specific Listener and Target.
 		 * Altogether, you have 7 possibilities to combine these 3 parameter and perform an exclusion
 		 * of NResponders.
-		 * Some possiblities are:
+		 * Some possibilities are:
 		 * 
 		 * <ul>
 		 * 
@@ -689,7 +700,7 @@ package appkit.responders
 		 * 
 		 * @return				A Boolean that indicates: true = check exist, false = check don't exist.
 		 * 
-		 * @example To use this example just compile the folling code as a <code>NResponderHasExample.as</code>.
+		 * @example To use this example just compile the following code as a <code>NResponderHasExample.as</code>.
 		 * This example is similar to the structure of <code>remove()</code> example, but just with traces to
 		 * check the <code>has()</code> method.
 		 * 
@@ -707,7 +718,7 @@ package appkit.responders
 		 * 		
 		 * 		public function NResponderHasExample():void
 		 * 		{
-		 * 			// First let's add a serie of different NResponders.
+		 * 			// First let's add a series of different NResponders.
 		 * 			NResponder.add('theAction', actionListener);
 		 * 			NResponder.add('anotherAction', actionListener);
 		 * 			NResponder.add('anActionWithTarget', anotherListener, 0, 0, 0, this);
@@ -753,9 +764,9 @@ package appkit.responders
 		 * can be used combining the three parameters.
 		 * To ignore a parameter, just set it to <code>null</code>. With this behavior you can
 		 * dispatch all NResponders to a specific Action, or all NResponders to a specific Target.
-		 * Obviously you can't just set the second parameter(<code>params</code>) thah will be the scope
+		 * Obviously you can't just set the second parameter(<code>params</code>) that will be the scope
 		 * to your dispatch.
-		 * Some possiblities are:
+		 * Some possibilities are:
 		 * 
 		 * <ul>
 		 * 
@@ -787,8 +798,9 @@ package appkit.responders
 		 * 
 		 * @param	toTarget	If specified, dispatch the Action just to this target.
 		 * 
-		 * @example To use this example just compile the folling code as a <code>NResponderDispatchExample.as</code>.
-		 * This example is similar to the structure of <code>remove()</code> example, but just with dispatches.
+		 * @example To use this example just compile the following code as a
+		 * <code>NResponderDispatchExample.as</code>. This example is similar to the structure of
+		 * <code>remove()</code> example, but just with dispatches.
 		 * 
 		 * <listing version="3.0" >
 		 * package
@@ -804,7 +816,7 @@ package appkit.responders
 		 * 		
 		 * 		public function NResponderDispatchExample():void
 		 * 		{
-		 * 			// First let's add a serie of different NResponders.
+		 * 			// First let's add a series of different NResponders.
 		 * 			NResponder.add('theAction', actionListener);
 		 * 			NResponder.add('anotherAction', actionListener);
 		 * 			NResponder.add('anActionWithTarget', anotherListener, 0, 0, 0, this);
@@ -848,17 +860,17 @@ package appkit.responders
 		 * 		
 		 * 		private function anotherListener():void
 		 * 		{
-		 * 			trace('OK, anotherListener is catched with seted target', NResponder.currentTarget);
+		 * 			trace('OK, anotherListener is catched with set target', NResponder.currentTarget);
 		 * 		}
 		 * 		
 		 * 		private function downHandler(e:MouseEvent):void
 		 * 		{
-		 * 			trace('OK, MouseDown --- Originaly was set as first to MOUSE_DOWN');
+		 * 			trace('OK, MouseDown --- Originally was set as first to MOUSE_DOWN');
 		 * 		}
 		 * 		
 		 * 		private function clickListener(e:MouseEvent):void
 		 * 		{
-		 * 			trace('OK, ClickListener  --- Originaly was set as last to MOUSE_DOWN');
+		 * 			trace('OK, ClickListener  --- Originally was set as last to MOUSE_DOWN');
 		 * 		}
 		 * 		
 		 * 		private function uncatchableListener(e:MouseEvent):void
@@ -878,7 +890,7 @@ package appkit.responders
 		}
 		
 		/**
-		 * Imediatly stop the propagation of an Action.
+		 * Immediately stop the propagation of an Action.
 		 * Just can be used during the dispatch process of a NResponder Action.
 		 * 
 		 * When you stop the propagation of an Action any attributes of the following stoped NResponders take
@@ -893,7 +905,8 @@ package appkit.responders
 		}
 		
 		/**
-		 * This method force to perform only this NResponder without dispatch the corresponding NResponder Action.
+		 * This method force to perform only this NResponder without dispatch the corresponding
+		 * NResponder Action.
 		 * Using this method directly, the number of replies to this NResponder will not be changed.
 		 * 
 		 * <p/>
@@ -930,17 +943,22 @@ package appkit.responders
 		
 	//**********************************************************************************************************
 	//
-	//  Protected / Private Methods
-	//
-	//**********************************************************************************************************
-		
-		
-		
-	//**********************************************************************************************************
-	//
 	//  Getters / Setters
 	//
 	//**********************************************************************************************************
+		
+		/**
+		 * The order of this NResponder
+		 * 
+		 * @langversion ActionScript 3.0
+		 * @playerversion Flash 9.0
+		 */
+		public function get order():uint { return $order; }
+		
+		public function set order(index:uint):void
+		{
+			$order = index;
+		}
 		
 		/**
 		 * Return the Object associated with current called listener of a NResponder Action.
@@ -1020,19 +1038,6 @@ package appkit.responders
 		 * @playerversion Flash 9.0
 		 */
 		public function get hash():uint { return $hash; }
-		
-		/**
-		 * The order of this NResponder
-		 * 
-		 * @langversion ActionScript 3.0
-		 * @playerversion Flash 9.0
-		 */
-		public function get order():uint { return $order; }
-		
-		public function set order(index:uint):void
-		{
-			$order = index;
-		}
 		
 	}
 }
